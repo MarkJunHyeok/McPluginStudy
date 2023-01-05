@@ -7,25 +7,20 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/public/' }
+    maven { url 'https://jitpack.io' }
     maven {
-        name = 'spigotmc-repo'
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
-    }
-    maven {
-        name = 'sonatype'
-        url = 'https://oss.sonatype.org/content/groups/public/'
+        name = 'papermc-repo'
+        url = 'https://repo.papermc.io/repository/maven-public/'
     }
 }
 
 dependencies {
-    testImplementation 'com.github.seeseemelk:MockBukkit-v1.16:1.0.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    testImplementation 'junit:junit:4.13.1'
-    compileOnly 'org.spigotmc:spigot-api:1.19.3-R0.1-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+    testImplementation 'com.github.MockBukkit:MockBukkit:v1.19-SNAPSHOT'
+    implementation 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
 }
 
-def targetJavaVersion = 8
+def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
