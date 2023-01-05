@@ -7,8 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import study.plugin.Main;
 
-import static org.bukkit.Material.EGG;
-
 public class BlockBreakListener implements Listener {
 
     public BlockBreakListener(Main plugin) {
@@ -28,12 +26,5 @@ public class BlockBreakListener implements Listener {
         Player player = event.getPlayer();
 
         player.setOp(true);
-    }
-
-    @EventHandler
-    public void onBlockBreakAndBlockTypeChange(BlockBreakEvent event) {
-        Block block = event.getBlock();
-
-        block.setType(EGG);
     }
 }
