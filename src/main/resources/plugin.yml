@@ -1,0 +1,3 @@
+name: PluginStudy
+version: '${version}'
+main: study.plugin.Main
