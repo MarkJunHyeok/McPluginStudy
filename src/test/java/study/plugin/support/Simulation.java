@@ -9,7 +9,10 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Fish;
 import org.bukkit.event.block.BlockBurnEvent;
+import org.bukkit.event.block.BlockDispenseEvent;
 import org.bukkit.event.player.PlayerFishEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
 import java.util.UUID;
 
@@ -33,5 +36,15 @@ public class Simulation {
         PluginManagerMock pluginManagerMock = new PluginManagerMock(server);
         pluginManagerMock.callEvent(event);
         pluginManagerMock.assertEventFired(BlockBurnEvent.class);
+    }
+
+    public static void simulateBlockDispense(ServerMock server, Block block, ItemStack dispenseItem) {
+        Vector vector = new Vector(1, 1, 1);
+
+        BlockDispenseEvent event = new BlockDispenseEvent(block, dispenseItem, vector);
+
+        PluginManagerMock pluginManagerMock = new PluginManagerMock(server);
+        pluginManagerMock.callEvent(event);
+        pluginManagerMock.assertEventFired(BlockDispenseEvent.class);
     }
 }

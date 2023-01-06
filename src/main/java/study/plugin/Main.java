@@ -16,6 +16,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
         getServer().getPluginManager().registerEvents(new BlockBurnListener(), this);
         getServer().getPluginManager().registerEvents(new BlockDamageListener(), this);
+        getServer().getPluginManager().registerEvents(new BlockDispenseListener(), this);
     }
 
     @Override
