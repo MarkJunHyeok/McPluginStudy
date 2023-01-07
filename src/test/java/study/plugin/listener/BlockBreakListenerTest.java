@@ -10,6 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BlockBreakListenerTest extends MainTest {
 
+    @Override
+    public void setListener() {
+        server.getPluginManager().registerEvents(new BlockBreakListener(), plugin);
+    }
+
     @Test
     void 플레이어가_블럭을_부시면_블럭의_이름을_말함() {
         BlockMock block = new BlockMock();

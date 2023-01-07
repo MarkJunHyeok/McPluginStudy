@@ -10,6 +10,9 @@ import static study.plugin.support.Simulation.simulateBlockBurn;
 
 class BlockBurnListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new BlockBurnListener(), plugin);
+    }
     @Test
     void 블럭이_불에타면_블럭_종류가_변경됨() {
         BlockMock block = new BlockMock(EMERALD_BLOCK);

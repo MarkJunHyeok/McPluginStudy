@@ -7,7 +7,7 @@ import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-public class MainTest {
+public abstract class MainTest {
 
     protected Main plugin;
     protected ServerMock server;
@@ -18,10 +18,13 @@ public class MainTest {
         server = MockBukkit.mock();
         plugin = MockBukkit.load(Main.class);
         player = server.addPlayer();
+        setListener();
     }
 
     @AfterEach
     public void tearDown() {
         MockBukkit.unmock();
     }
+
+    abstract public void setListener();
 }

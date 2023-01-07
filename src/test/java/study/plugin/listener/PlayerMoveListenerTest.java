@@ -14,6 +14,10 @@ import static study.plugin.listener.PlayerMoveListener.GENERATE_CUBE_LENGTH;
 
 class PlayerMoveListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new PlayerMoveListener(), plugin);
+    }
+
     @Test
     void 플레이어가_걸으면_큐브가_생성됨() {
         WorldMock world = new WorldMock();

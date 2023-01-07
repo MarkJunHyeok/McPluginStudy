@@ -12,6 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BlockPlaceListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new BlockPlaceListener(), plugin);
+    }
+
     @Test
     void 플레이어가_블럭을_설치하면_블럭의_이름을_말함() {
         player.simulateBlockPlace(EMERALD_BLOCK, LocationFixture.getLocation());

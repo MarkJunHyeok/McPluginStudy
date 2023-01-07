@@ -10,6 +10,9 @@ import static study.plugin.fixture.BlockFixture.getBlock;
 
 class BlockDamageListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new BlockDamageListener(), plugin);
+    }
     @Test
     void 블럭을_부수면_플레이어가_들고있는_아이템_이름을_말함() {
         ItemStack itemStack = new ItemStack(EMERALD_BLOCK);

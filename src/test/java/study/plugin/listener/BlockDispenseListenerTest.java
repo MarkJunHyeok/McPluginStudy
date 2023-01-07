@@ -12,6 +12,10 @@ import static study.plugin.support.Simulation.simulateBlockDispense;
 
 class BlockDispenseListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new BlockDispenseListener(), plugin);
+    }
+
     @Test
     void 블럭에서_발사되면_발사된_아이템_타입이_변경됨() {
         Block block = BlockFixture.getBlock();

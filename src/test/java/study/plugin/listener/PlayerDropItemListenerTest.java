@@ -10,6 +10,10 @@ import static study.plugin.support.Simulation.simulatePlayerDropItem;
 
 class PlayerDropItemListenerTest extends MainTest {
 
+    public void setListener() {
+        server.getPluginManager().registerEvents(new PlayerDropItemListener(), plugin);
+    }
+
     @Test
     void 플레이어가_아이템을_버리면_아이템이_변경되어_인벤토리에_들어온다() {
         ItemStack itemStack = new ItemStack(GOLDEN_SWORD);
