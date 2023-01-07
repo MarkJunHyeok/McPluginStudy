@@ -8,11 +8,15 @@ import be.seeseemelk.mockbukkit.plugin.PluginManagerMock;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Fish;
+import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBurnEvent;
 import org.bukkit.event.block.BlockDispenseEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.util.Vector;
+import study.plugin.mock.ItemMock;
 
 import java.util.UUID;
 
@@ -46,5 +50,16 @@ public class Simulation {
         PluginManagerMock pluginManagerMock = new PluginManagerMock(server);
         pluginManagerMock.callEvent(event);
         pluginManagerMock.assertEventFired(BlockDispenseEvent.class);
+    }
+
+    public static void simulatePlayerDropItem(ServerMock server, Player player, ItemStack dropItem) {
+        ItemMock itemMock = new ItemMock();
+        itemMock.setItemStack(dropItem);
+
+        PlayerDropItemEvent event = new PlayerDropItemEvent(player, itemMock);
+
+        PluginManagerMock pluginManagerMock = new PluginManagerMock(server);
+        pluginManagerMock.callEvent(event);
+        pluginManagerMock.assertEventFired(PlayerDropItemEvent.class);
     }
 }

@@ -18,6 +18,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BlockDamageListener(), this);
         getServer().getPluginManager().registerEvents(new BlockDispenseListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerDropItemListener(), this);
     }
 
     @Override
