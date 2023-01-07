@@ -3,12 +3,12 @@ package study.plugin.listener;
 import be.seeseemelk.mockbukkit.block.BlockMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import static org.bukkit.Material.EMERALD_BLOCK;
 import static study.plugin.support.Simulation.simulateBlockBurn;
 
-class BlockBurnListenerTest extends MainTest {
+class BlockBurnListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new BlockBurnListener(), plugin);

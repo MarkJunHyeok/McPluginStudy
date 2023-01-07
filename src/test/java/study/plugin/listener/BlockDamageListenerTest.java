@@ -2,13 +2,13 @@ package study.plugin.listener;
 
 import org.bukkit.inventory.ItemStack;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import static org.bukkit.Material.EMERALD_BLOCK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static study.plugin.fixture.BlockFixture.getBlock;
 
-class BlockDamageListenerTest extends MainTest {
+class BlockDamageListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new BlockDamageListener(), plugin);

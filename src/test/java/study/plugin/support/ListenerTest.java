@@ -1,4 +1,4 @@
-package study.plugin;
+package study.plugin.support;
 
 
 import be.seeseemelk.mockbukkit.MockBukkit;
@@ -6,8 +6,9 @@ import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import study.plugin.Main;
 
-public abstract class MainTest {
+public abstract class ListenerTest {
 
     protected Main plugin;
     protected ServerMock server;

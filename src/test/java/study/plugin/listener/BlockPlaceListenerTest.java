@@ -2,7 +2,7 @@ package study.plugin.listener;
 
 import be.seeseemelk.mockbukkit.WorldMock;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 import study.plugin.fixture.LocationFixture;
 
 import static org.bukkit.Material.AIR;
@@ -10,7 +10,7 @@ import static org.bukkit.Material.EMERALD_BLOCK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class BlockPlaceListenerTest extends MainTest {
+class BlockPlaceListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new BlockPlaceListener(), plugin);

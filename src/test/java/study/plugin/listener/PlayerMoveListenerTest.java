@@ -5,14 +5,14 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import static org.bukkit.Material.EMERALD_BLOCK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static study.plugin.fixture.LocationFixture.getLocation;
 import static study.plugin.listener.PlayerMoveListener.GENERATE_CUBE_LENGTH;
 
-class PlayerMoveListenerTest extends MainTest {
+class PlayerMoveListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new PlayerMoveListener(), plugin);

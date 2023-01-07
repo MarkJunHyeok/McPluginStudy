@@ -2,13 +2,13 @@ package study.plugin.listener;
 
 import be.seeseemelk.mockbukkit.entity.PufferFishMock;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import java.util.UUID;
 
 import static study.plugin.support.Simulation.simulateFishing;
 
-class PlayerFishListenerTest extends MainTest {
+class PlayerFishListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new PlayerFishListener(), plugin);

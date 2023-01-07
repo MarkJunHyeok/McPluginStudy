@@ -2,13 +2,13 @@ package study.plugin.listener;
 
 import be.seeseemelk.mockbukkit.block.BlockMock;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import static org.bukkit.Material.EMERALD_BLOCK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class BlockBreakListenerTest extends MainTest {
+class BlockBreakListenerTest extends ListenerTest {
 
     @Override
     public void setListener() {

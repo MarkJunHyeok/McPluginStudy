@@ -2,13 +2,13 @@ package study.plugin.listener;
 
 import org.bukkit.inventory.ItemStack;
 import org.junit.jupiter.api.Test;
-import study.plugin.MainTest;
+import study.plugin.support.ListenerTest;
 
 import static org.bukkit.Material.GOLDEN_SWORD;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static study.plugin.support.Simulation.simulatePlayerDropItem;
 
-class PlayerDropItemListenerTest extends MainTest {
+class PlayerDropItemListenerTest extends ListenerTest {
 
     public void setListener() {
         server.getPluginManager().registerEvents(new PlayerDropItemListener(), plugin);
