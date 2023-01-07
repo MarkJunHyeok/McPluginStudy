@@ -24,6 +24,4 @@ public class MainTest {
     public void tearDown() {
         MockBukkit.unmock();
     }
-
-
 }
